@@ -1,3 +1,6 @@
+require_relative "metrics"
+require_relative "transaction_pinning"
+
 module Fizzy
   module Saas
     class Engine < ::Rails::Engine
@@ -8,6 +11,10 @@ module Fizzy
         app.routes.append do
           mount Fizzy::Saas::Engine => "/", as: "saas"
         end
+      end
+
+      initializer "fizzy_saas.transaction_pinning" do |app|
+        app.config.middleware.insert_after(ActiveRecord::Middleware::DatabaseSelector, TransactionPinning::Middleware)
       end
 
       config.to_prepare do
