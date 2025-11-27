@@ -44,6 +44,7 @@ env:
     - ACTIVE_STORAGE_SECRET_ACCESS_KEY
     - QUEENBEE_API_TOKEN
     - SIGNAL_ID_SECRET
+    - SENTRY_DSN
   tags:
     sc_chi:
       MYSQL_SOLID_CACHE_HOST: fizzy-staging-solidcache-db-01.sc-chi-int.37signals.com
