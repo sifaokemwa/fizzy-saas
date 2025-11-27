@@ -15,9 +15,7 @@ module Fizzy
       end
 
       initializer "fizzy_saas.transaction_pinning" do |app|
-        if ActiveRecord::Base.replica_configured?
-          app.config.middleware.insert_after(ActiveRecord::Middleware::DatabaseSelector, TransactionPinning::Middleware)
-        end
+        app.config.middleware.insert_after(ActiveRecord::Middleware::DatabaseSelector, TransactionPinning::Middleware)
       end
 
       initializer "fizzy_saas.production_config", before: :load_config_initializers do |app|
