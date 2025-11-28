@@ -20,6 +20,10 @@ Then you can work do [Fizzy development as usual](https://github.com/basecamp/fi
 
 Fizzy is deployed with [Kamal](https://kamal-deploy.org/). You'll need to have the 1Password CLI set up in order to access the secrets that are used when deploying. Provided you have that, it should be as simple as `bin/kamal deploy` to the correct environment.
 
+## Handbook
+
+See the [Fizzy handbook](https://handbooks.37signals.works/18/fizzy) for runbooks and other information.
+
 ### Beta
 
 Beta is primarily intended for testing product features.
