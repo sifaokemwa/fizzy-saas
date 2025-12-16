@@ -1,3 +1,7 @@
+> **Archived:** This repository has been merged back into [Fizzy](https://github.com/basecamp/fizzy) as a vendored gem at `saas/`. All future development happens there.
+
+---
+
 This is a Rails engine that [37signals](https://37signals.com/) bundles with [Fizzy](https://github.com/basecamp/fizzy) to offer the hosted version at https://fizzy.do.
 
 ## Development
